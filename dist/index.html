@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Huiqin (Hermine) Ni | Research Portfolio</title>
+  <title>Huiqin (Hermine) Ni | Personal Website</title>
   <meta name="description" content="Huiqin (Hermine) Ni, Mechanical Engineering PhD researcher at NC State. Responsive polymers, slippery surfaces, electroadhesion, and engineering projects.">
   <meta name="theme-color" content="#bb151e">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ET1FBNC1C"></script>
@@ -15,6 +15,7 @@
   </script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23bb151e'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="profile-links.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -29,7 +30,7 @@
         <h1 id="hero-title">Huiqin<br><span>(Hermine)</span> Ni<span class="red-period">.</span></h1>
         <p class="hero-focus">Responsive materials.<br>Functional interfaces.</p>
         <p class="intro">I study how polymer chemistry and surface design control liquid motion and adhesion—from slippery coatings to responsive soft materials.</p>
-        <div class="hero-links"><a class="button primary" href="#research">Explore my research</a><a class="text-link" href="mailto:hni8@ncsu.edu">hni8@ncsu.edu</a></div>
+        <div class="hero-links"><a class="button primary" href="#research">Explore my research</a><a class="text-link" href="mailto:hni8@ncsu.edu">Email</a><a class="text-link" href="https://www.linkedin.com/in/huiqin-ni-4b597a24b/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a><a class="text-link" href="https://scholar.google.com/citations?user=68U9uAEAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar<span class="sr-only"> (opens in a new tab)</span></a></div>
       </div>
       <aside class="research-index" aria-labelledby="index-title">
         <div class="index-top"><span>Research portfolio</span><span>01—03</span></div>
@@ -133,7 +134,7 @@
 
     <section id="about" class="about-section" aria-labelledby="about-title"><div class="wrap section about-grid"><figure class="about-portrait"><img src="images/hermine-ni-portrait.jpg" alt="Portrait of Huiqin (Hermine) Ni" width="960" height="1440" loading="lazy" decoding="async"></figure><div><p class="eyebrow">06 / About</p><h2 id="about-title">A path across<br>materials and places.</h2><p>I am a Mechanical Engineering PhD researcher at North Carolina State University, advised by Prof. Arun Kumar Kota. My research centers on functional polymer surfaces, responsive materials, and adhesion.</p><p>My training spans materials science, chemical engineering, and applied physics, with research experience in China, Finland, and the United States.</p><div class="about-links"><a class="button dark" href="Huiqin_Ni_CV.pdf" download>Download my CV</a><a class="text-link" href="mailto:hni8@ncsu.edu">Get in touch</a></div></div><ol class="education-list"><li><span>2024–Present</span><h3>North Carolina State University</h3><p>Ph.D. in Mechanical Engineering<br>Raleigh, United States</p></li><li><span>2022–2023</span><h3>Aalto University</h3><p>Visiting Student, Applied Physics<br>Helsinki, Finland</p></li><li><span>2021–2024</span><h3>China University of Petroleum</h3><p>M.S. in Chemical Engineering and Technology<br>Beijing, China</p></li><li><span>2017–2021</span><h3>China University of Petroleum</h3><p>B.Eng. in Materials Science and Engineering<br>Rank: 2/84 · Beijing, China</p></li></ol></div></section>
   </main>
-  <footer class="wrap"><div><strong>Huiqin (Hermine) Ni</strong><p>Research in responsive materials and functional interfaces.</p></div><div><a href="mailto:hni8@ncsu.edu">hni8@ncsu.edu</a><span>Raleigh, NC · Updated October 2026</span></div></footer>
+  <footer class="wrap"><div><strong>Huiqin (Hermine) Ni</strong><p>Research in responsive materials and functional interfaces.</p></div><div><div class="footer-links"><a href="mailto:hni8@ncsu.edu">Email</a><a href="https://www.linkedin.com/in/huiqin-ni-4b597a24b/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a><a href="https://scholar.google.com/citations?user=68U9uAEAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar<span class="sr-only"> (opens in a new tab)</span></a></div><span>Raleigh, NC · Updated October 2026</span></div></footer>
   <script>
     document.addEventListener('click', function (event) {
       var link = event.target.closest('a[href]');
@@ -148,6 +149,10 @@
         eventName = 'github_click';
       } else if (/^https?:\/\/(?:www\.)?substack\.com\//i.test(href)) {
         eventName = 'substack_click';
+      } else if (/^https?:\/\/(?:www\.)?linkedin\.com\//i.test(href)) {
+        eventName = 'linkedin_click';
+      } else if (/^https?:\/\/scholar\.google\.com\//i.test(href)) {
+        eventName = 'google_scholar_click';
       } else if (link.closest('#publications') && /^https?:\/\//i.test(href)) {
         eventName = 'publication_click';
       } else if (/^(?:mailto:|tel:)/i.test(href)) {
