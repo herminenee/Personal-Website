@@ -12,6 +12,65 @@
 .life-tags{font-size:.875rem;letter-spacing:.03em;color:var(--red);margin-top:1.3rem}
 @media(max-width:760px){.life-intro{grid-template-columns:1fr;gap:1rem}}
 
+/* Put identity and portrait above the fold; keep the full biography below. */
+.hero-identity{
+  display:grid;
+  grid-template-columns:minmax(115px,145px) minmax(0,1fr);
+  gap:1.5rem;
+  align-items:start;
+}
+.hero-portrait{
+  margin:0;
+  width:100%;
+}
+.hero-portrait img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:2/3;
+  object-fit:cover;
+}
+.hero-introduction{min-width:0}
+.hero-role{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1.1rem;
+  line-height:1.45;
+  margin-bottom:1.1rem;
+}
+.hero-identity .hero-focus{
+  font-size:1.25rem;
+  margin-bottom:.9rem;
+}
+.hero-identity .intro{
+  font-size:1rem;
+  line-height:1.55;
+}
+.about-grid{
+  grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  gap:5rem;
+}
+
+@media(max-width:1050px){
+  .hero-identity{grid-template-columns:110px minmax(0,1fr);gap:1.2rem}
+  .hero-role{font-size:1rem}
+  .about-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem}
+  .about-grid>.education-list{grid-column:auto}
+}
+
+@media(max-width:760px){
+  .hero-identity{grid-template-columns:120px minmax(0,1fr);gap:1.25rem}
+  .hero-role{font-size:1.03rem}
+  .hero-identity .hero-focus{font-size:1.18rem}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+}
+
+@media(max-width:400px){
+  .hero-identity{grid-template-columns:105px minmax(0,1fr);gap:1rem}
+  .hero-role{font-size:.96rem;line-height:1.4}
+  .hero-identity .hero-focus{font-size:1.05rem}
+  .hero-identity .intro{font-size:.94rem}
+}
+
 /* Keep section navigation available while readers move through the page. */
 .site-header{
   position:sticky;
