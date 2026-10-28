@@ -11,3 +11,53 @@
 .life-intro>div>p:first-child{color:var(--muted);font-size:1.063rem}
 .life-tags{font-size:.875rem;letter-spacing:.03em;color:var(--red);margin-top:1.3rem}
 @media(max-width:760px){.life-intro{grid-template-columns:1fr;gap:1rem}}
+
+/* Keep section navigation available while readers move through the page. */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 1px 0 rgba(23,23,23,.06);
+}
+
+@media(max-width:760px){
+  :root{scroll-padding-top:5rem}
+  body{overflow-x:clip}
+  .site-header{
+    min-height:4.5rem;
+    padding:.8rem 1rem;
+    align-items:center;
+    gap:.85rem;
+  }
+  .wordmark{
+    flex:0 0 auto;
+    font-size:1.75rem;
+  }
+  .site-header nav{
+    flex:1 1 auto;
+    max-width:none;
+    min-width:0;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    gap:1.15rem;
+    overflow-x:auto;
+    overscroll-behavior-inline:contain;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    padding:.35rem .15rem;
+  }
+  .site-header nav::-webkit-scrollbar{display:none}
+  .site-header nav a{
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+  .hero h1{
+    font-size:clamp(3.35rem,16vw,4.4rem);
+    overflow-wrap:normal;
+  }
+  .hero h1 br{display:block}
+}
+
+@media print{
+  .site-header{position:static;box-shadow:none}
+}
