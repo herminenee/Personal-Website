@@ -12,6 +12,14 @@
 .life-tags{font-size:.875rem;letter-spacing:.03em;color:var(--red);margin-top:1.3rem}
 @media(max-width:760px){.life-intro{grid-template-columns:1fr;gap:1rem}}
 
+.life-artwork{margin:1rem 0 0;border-top:1px solid var(--ink);padding-top:1.25rem}
+.life-artwork>a{display:block;background:var(--soft)}
+.life-artwork img{display:block;width:100%;height:auto}
+.life-artwork figcaption{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:3rem;padding-top:1rem}
+.life-artwork figcaption p{margin:0;color:var(--muted);font-size:.938rem}
+.life-artwork figcaption strong{color:var(--ink);font-weight:600}
+@media(max-width:760px){.life-artwork figcaption{grid-template-columns:1fr;gap:.75rem}}
+
 /* Put identity and portrait above the fold; keep the full biography below. */
 .hero-identity{
   display:grid;
